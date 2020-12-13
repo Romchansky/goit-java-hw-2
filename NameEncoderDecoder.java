@@ -24,7 +24,7 @@ public class NameEncoderDecoder {
 
     public static void main(String[] args) {
 
-        module2.NameEncoderDecoder nameEncoderDecoder = new module2.NameEncoderDecoder();
+        NameEncoderDecoder nameEncoderDecoder = new NameEncoderDecoder();
 
         String nameEncode = nameEncoderDecoder.encode("Crab");
         System.out.println("nameEncoderDecoder.encode(\"Crab\") " + nameEncode);
