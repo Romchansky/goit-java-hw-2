@@ -12,13 +12,15 @@ public class NameEncoderDecoder {
 
     public String decode(String name) {
         String decodeName = name
-                .replace("NOTFORYOU", "")
+                .substring(9)
+                .replace("YESNOTFORYOU", "")
                 .replace("YES", "")
                 .replace("1", "e")
                 .replace("2", "u")
                 .replace("3", "i")
                 .replace("4", "o")
-                .replace("5", "a");
+                .replace("5", "a")
+                .strip();
         return decodeName;
     }
 
@@ -32,6 +34,7 @@ public class NameEncoderDecoder {
         String nameDecode = nameEncoderDecoder.decode(nameEncode);
         System.out.println("nameEncoderDecoder.decode(nameEncode)" + nameDecode);
 
-
+        String nameDecodeTwo = nameEncoderDecoder.decode("NOTFORYOUNOTFORYOUYESNOTFORYOU");
+        System.out.println("nameEncoderDecoder.encode(\"NOTFORYOUNOTFORYOUYESNOTFORYOU\")" + nameDecodeTwo);
     }
 }
